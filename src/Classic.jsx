@@ -1,9 +1,10 @@
 import { Label } from "./constant";
 import { getLayoutSettings, getLayoutStyles } from "./utils";
 
-export default function Classic(settings, eventData) {
+export default function Classic(props) {
+  const { settings, eventData } = props;
   const layoutSettings = getLayoutSettings(settings);
-    const layoutStyles = getLayoutStyles(layoutSettings);
+  const layoutStyles = getLayoutStyles(layoutSettings);
 
   return (
     <div className="upSYYl" style={layoutStyles.backgroundStyle}>

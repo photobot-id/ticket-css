@@ -1,7 +1,8 @@
 import { Label } from "./constant";
 import { getLayoutSettings, getLayoutStyles } from "./utils";
 
-export default function Chic(settings, eventData) {
+export default function Chic(props) {
+  const { settings, eventData } = props;
   const layoutSettings = getLayoutSettings(settings);
   const layoutStyles = getLayoutStyles(layoutSettings);
   return (
