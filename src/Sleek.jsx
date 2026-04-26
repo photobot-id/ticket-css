@@ -78,9 +78,13 @@ export default function Sleek(props) {
                 style={layoutStyles.dividerStyle}
               >
                 <div className="e6i2Lz">
-                  <div className="NjdZM2">
+                  {/* cRTiLc */}
+                  <div className={`NjdZM2${(layoutSettings.display.show_qr_code ||
+                    layoutSettings.display.show_ticket_number) ? "" : " cRTiLc"}`}>
                     <div
-                      className="EOqirQ Gg7kDh pwOGjD rS3D7n"
+                      className={`EOqirQ Gg7kDh pwOGjD${(layoutSettings.display.show_qr_code ||
+                    layoutSettings.display.show_ticket_number) ? "" : " RjeHZ5"}${(layoutSettings.display.show_order_date ||
+                    layoutSettings.display.show_ticket_number) ? "" : " ryhobB"} rS3D7n`}
                       style={layoutStyles.dividerStyle}
                     >
                       {layoutSettings.display.show_ticket_price && (
@@ -114,7 +118,8 @@ export default function Sleek(props) {
                       layoutSettings.display.show_order_number ||
                       layoutSettings.display.show_order_date) && (
                       <div
-                        className="Gg7kDh pwOGjD ryhobB rS3D7n"
+                        className={`Gg7kDh pwOGjD${(layoutSettings.display.show_qr_code ||
+                    layoutSettings.display.show_ticket_number) ? "" : " RjeHZ5"} ryhobB rS3D7n`}
                         style={layoutStyles.dividerStyle}
                       >
                         <div

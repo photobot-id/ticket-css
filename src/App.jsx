@@ -13,18 +13,22 @@ function App() {
   const [ticketType, setTicketType] = useState("classic");
   useEffect(() => {
     const handleMessage = (e) => {
-      if (e.message.data.source === "ticket-editor-page") {
-        setSettings(e.message.data.settings);
-        setEventData(e.message.data.eventData);
-        setTicketType(e.message.data.type);
+      if (e.data.source === "ticket-editor-page") {
+        console.log(e.data)
+        setSettings(e.data.settings);
+        setEventData(e.data.eventData);
+        setTicketType(e.data.type);
       }
-      // React will hear the message forwarded by the loader script above
     };
     window.addEventListener("message", handleMessage);
+    window.parent.postMessage({ source: "ticket-editor-iframe", status: "ready" }, "https://www.photobot.id/");
     return () => window.removeEventListener("message", handleMessage);
   }, []);
 
   const renderTicket = () => {
+    if (!settings) {
+      return (<div></div>)
+    }
     switch (ticketType) {
       case "sleek":
         return <Sleek eventData={eventData} settings={settings}/>;
@@ -45,7 +49,7 @@ function App() {
     <div style={{  height:"100vh", width: "100vw" }}>
       <div className="preview-container">
         <div className="preview-wrapper">
-          <div style={{transform: `scale(0.52)`}}>
+          <div style={{transform: `scale(${(window.innerHeight-20) / 1123})`}}>
             <div style={{
               "--papyrus-height": "1123px",
               "--papyrus-width": "794px",

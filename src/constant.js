@@ -221,7 +221,7 @@ export const settings = {
         "bottom_image": {
           "image": {
             "id": "936ad1_7d58251c31544f729b32c412fd2d3f0b~mv2.jpg",
-            "url": "https://static.wixstatic.com/media/936ad1_7d58251c31544f729b32c412fd2d3f0b~mv2.jpg",
+            "url": "https://static.wixstatic.com/media/936ad1_7d58251c31544f729b32c412fd2d3f0b~mv2.jpg/v1/fill/w_1160,h_672,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/936ad1_7d58251c31544f729b32c412fd2d3f0b~mv2.jpg",
             "height": 4777,
             "width": 3185
           },
@@ -404,7 +404,7 @@ export const settings = {
           "color": "#FFFFFF00",
           "image": {
             "id": "936ad1_84ab946611e84569b6a851bff8c799c2~mv2.png",
-            "url": "https://static.wixstatic.com/media/936ad1_84ab946611e84569b6a851bff8c799c2~mv2.png",
+            "url": "https://static.wixstatic.com/media/936ad1_84ab946611e84569b6a851bff8c799c2~mv2.png/v1/fill/w_1469,h_678,al_c,q_95,usm_0.66_1.00_0.01,enc_auto/936ad1_84ab946611e84569b6a851bff8c799c2~mv2.png",
             "height": 3814,
             "width": 2190
           }
@@ -481,7 +481,7 @@ export const settings = {
         "top_image": {
           "image": {
             "id": "936ad1_d4eb342407e240979bc0bc8286cb25b9~mv2.jpg",
-            "url": "https://static.wixstatic.com/media/936ad1_d4eb342407e240979bc0bc8286cb25b9~mv2.jpg",
+            "url": "https://static.wixstatic.com/media/936ad1_d4eb342407e240979bc0bc8286cb25b9~mv2.jpg/v1/fill/w_448,h_674,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/936ad1_d4eb342407e240979bc0bc8286cb25b9~mv2.jpg",
             "height": 4013,
             "width": 6019
           },
@@ -611,7 +611,7 @@ export const settings = {
         "bottom_image": {
           "image": {
             "id": "936ad1_cda2ea0299454b4aa983a2421cd28734~mv2.jpg",
-            "url": "https://static.wixstatic.com/media/936ad1_cda2ea0299454b4aa983a2421cd28734~mv2.jpg",
+            "url": "https://static.wixstatic.com/media/936ad1_cda2ea0299454b4aa983a2421cd28734~mv2.jpg/v1/fill/w_1270,h_635,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/936ad1_cda2ea0299454b4aa983a2421cd28734~mv2.jpg",
             "height": 2201,
             "width": 3959
           },
@@ -741,7 +741,7 @@ export const settings = {
         "ticket_image": {
           "image": {
             "id": "936ad1_74a105a59d074d7fb2204b523396ff38~mv2.png",
-            "url": "https://static.wixstatic.com/media/936ad1_74a105a59d074d7fb2204b523396ff38~mv2.png",
+            "url": "https://static.wixstatic.com/media/936ad1_74a105a59d074d7fb2204b523396ff38~mv2.png/v1/fill/w_1150,h_640,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/936ad1_74a105a59d074d7fb2204b523396ff38~mv2.png",
             "height": 1232,
             "width": 2190
           },

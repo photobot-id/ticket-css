@@ -180,7 +180,7 @@ export default function Chic(props) {
               )}
             </div>
             {layoutSettings.display.show_ticket_policy && (
-              <div class="JhaI3p">
+              <div className="JhaI3p">
                 <span style={layoutStyles.policyStyle}>
                   {eventData.ticketPolicy}
                 </span>

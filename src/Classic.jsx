@@ -27,7 +27,7 @@ export default function Classic(props) {
             >
               <div className="UD6Gu5 Gg7kDh" style={layoutStyles.dividerStyle}>
                 <div
-                  className="Gg7kDh pwOGjD ryhobB rS3D7n"
+                  className={`Gg7kDh pwOGjD ${layoutSettings.display.show_ticket_number ? "" : "RjeHZ5"} ryhobB rS3D7n`}
                   style={layoutStyles.dividerStyle}
                 >
                   <div className="XjZ8Px">
@@ -53,15 +53,22 @@ export default function Classic(props) {
                   </div>
                 )}
               </div>
+              {/* ODZqCq Gg7kDh pwOGjD RjeHZ5 ryhobB rS3D7n */}
               <div
-                className="ODZqCq Gg7kDh pwOGjD"
+                className={"ODZqCq Gg7kDh pwOGjD"}
                 style={layoutStyles.dividerStyle}
               >
+                {/* Gg7kDh pwOGjD ryhobB rS3D7n */}
+                {/* ODZqCq Gg7kDh pwOGjD RjeHZ5 ryhobB rS3D7n */}
                 <div
-                  className="Gg7kDh pwOGjD ryhobB rS3D7n"
+                  className={(layoutSettings.display.show_order_number ||
+                  layoutSettings.display.show_payment_status ||
+                  layoutSettings.display.show_qr_code) ? "Gg7kDh pwOGjD ryhobB rS3D7n" : "ODZqCq Gg7kDh pwOGjD RjeHZ5 ryhobB rS3D7n"}
                   style={layoutStyles.dividerStyle}
                 >
-                  <div className="J9MbHQ">
+                  <div className={`J9MbHQ${(layoutSettings.display.show_order_number ||
+                  layoutSettings.display.show_payment_status ||
+                  layoutSettings.display.show_qr_code) ? "": " RlY4wt"}`}>
                     <div
                       className="Gg7kDh pwOGjD RjeHZ5 rS3D7n"
                       style={layoutStyles.dividerStyle}
@@ -96,8 +103,9 @@ export default function Classic(props) {
                       </div>
                     </div>
                     <div className="aRMnJS">
+                      {/* sxmtOE Gg7kDh pwOGjD RjeHZ5 ryhobB rS3D7n */}
                       <div
-                        className="sxmtOE o9wRTs Gg7kDh pwOGjD ryhobB rS3D7n"
+                        className={layoutSettings.display.show_order_date ? "sxmtOE o9wRTs Gg7kDh pwOGjD ryhobB rS3D7n" : "sxmtOE Gg7kDh pwOGjD RjeHZ5 ryhobB rS3D7n"}
                         style={layoutStyles.dividerStyle}
                       >
                         <div className="IYXGYD AYRW6G">
@@ -135,52 +143,56 @@ export default function Classic(props) {
                     </div>
                   </div>
                 </div>
-                <div className="VCBIdI">
-                  <div className="XeeO1t">
-                    {layoutSettings.display.show_order_number && (
-                      <div className="IYXGYD">
-                        <span className="gG_HWJ">
-                          <span style={layoutStyles.labelStyle}>
-                            {Label.orderDate}
+                {(layoutSettings.display.show_order_number ||
+                  layoutSettings.display.show_payment_status ||
+                  layoutSettings.display.show_qr_code) && (
+                  <div className="VCBIdI">
+                    <div className="XeeO1t">
+                      {layoutSettings.display.show_order_number && (
+                        <div className="IYXGYD">
+                          <span className="gG_HWJ">
+                            <span style={layoutStyles.labelStyle}>
+                              {Label.orderDate}
+                            </span>
                           </span>
-                        </span>
-                        <span className="cwt1m6">
-                          <span style={layoutStyles.detailsStyle}>
-                            {eventData.orderDate}
+                          <span className="cwt1m6">
+                            <span style={layoutStyles.detailsStyle}>
+                              {eventData.orderDate}
+                            </span>
                           </span>
-                        </span>
-                      </div>
-                    )}
-                    {layoutSettings.display.show_payment_status && (
-                      <div className="IYXGYD">
-                        <span className="gG_HWJ">
-                          <span style={layoutStyles.labelStyle}>
-                            {Label.paymentStatus}
+                        </div>
+                      )}
+                      {layoutSettings.display.show_payment_status && (
+                        <div className="IYXGYD">
+                          <span className="gG_HWJ">
+                            <span style={layoutStyles.labelStyle}>
+                              {Label.paymentStatus}
+                            </span>
                           </span>
-                        </span>
-                        <span className="cwt1m6">
-                          <span style={layoutStyles.detailsStyle}>
-                            {eventData.orderStatus}
+                          <span className="cwt1m6">
+                            <span style={layoutStyles.detailsStyle}>
+                              {eventData.orderStatus}
+                            </span>
                           </span>
-                        </span>
+                        </div>
+                      )}
+                    </div>
+                    {layoutSettings.display.show_qr_code && (
+                      <div
+                        className="niimv4"
+                        style={{
+                          justifyContent: "start",
+                        }}
+                      >
+                        <img
+                          className="xx_uJW"
+                          alt="Ticket QR code"
+                          src={eventData.checkInUrl}
+                        ></img>
                       </div>
                     )}
                   </div>
-                  {layoutSettings.display.show_qr_code && (
-                    <div
-                      className="niimv4"
-                      style={{
-                        justifyContent: "start",
-                      }}
-                    >
-                      <img
-                        className="xx_uJW"
-                        alt="Ticket QR code"
-                        src={eventData.checkInUrl}
-                      ></img>
-                    </div>
-                  )}
-                </div>
+                )}
               </div>
             </div>
             {(layoutSettings.display.show_ticket_policy ||
