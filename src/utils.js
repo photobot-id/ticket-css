@@ -17,12 +17,12 @@ export function getEventImageUrl(imageData, selectedTicketTemplate) {
 }
 
 export function getLogoUrl(imageData, selectedTicketTemplate) {
-  if (imageData.image.height > maxResLogo[selectedTicketTemplate].h || imageData.image.width > maxResLogo[selectedTicketTemplate].w) {
-    const ratio = Math.min(maxResLogo[selectedTicketTemplate].w / imageData.image.width, maxResLogo[selectedTicketTemplate].h / imageData.image.height);
-    imageData.image.height = Math.round(imageData.image.height * ratio);
-    imageData.image.width = Math.round(imageData.image.width * ratio);
+  if (imageData.height > maxResLogo[selectedTicketTemplate].h || imageData.width > maxResLogo[selectedTicketTemplate].w) {
+    const ratio = Math.min(maxResLogo[selectedTicketTemplate].w / imageData.width, maxResLogo[selectedTicketTemplate].h / imageData.height);
+    imageData.height = Math.round(imageData.height * ratio);
+    imageData.width = Math.round(imageData.width * ratio);
   }
-  return `https://static.wixstatic.com/media/${imageData.image.id}/v1/fill/w_${imageData.image.width},h_${imageData.image.height},al_c,q_90,usm_0.66_1.00_0.01,enc_auto/${imageData.image.id}`;
+  return `https://static.wixstatic.com/media/${imageData.id}/v1/fill/w_${imageData.width},h_${imageData.height},al_c,q_90,usm_0.66_1.00_0.01,enc_auto/${imageData.id}`;
 }
 
 export function getBackroundUrl(imageData, selectedTicketTemplate) {
