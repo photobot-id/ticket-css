@@ -1,5 +1,5 @@
 import { Label } from "./constant";
-import { getLayoutSettings, getLayoutStyles } from "./utils";
+import { getEventImageUrl, getLayoutSettings, getLayoutStyles } from "./utils";
 
 export default function Playful(props) {
   const { settings, eventData } = props;
@@ -175,7 +175,7 @@ export default function Playful(props) {
               }}
             >
               <img
-                src={layoutSettings.images.ticket_image.image.url}
+                src={getEventImageUrl(layoutSettings.images.ticket_image, "playful")}
                 alt="ticket_image"
                 style={{
                   objectFit:

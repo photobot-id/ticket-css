@@ -1,4 +1,20 @@
-import { fontFamilyList } from "./constant";
+import { fontFamilyList, maxRes } from "./constant";
+
+export function getEventImageUrl(imageData, selectedTicketTemplate) {
+  if (imageData.resize === "FIT") {
+    if (imageData.image.height > maxRes[selectedTicketTemplate].h || imageData.image.width > maxRes[selectedTicketTemplate].w) {
+      const ratio = Math.min(maxRes[selectedTicketTemplate].w / imageData.image.width, maxRes[selectedTicketTemplate].h / imageData.image.height);
+      imageData.image.height = Math.round(imageData.image.height * ratio);
+      imageData.image.width = Math.round(imageData.image.width * ratio);
+    }
+  } else {
+    if (imageData.image.height > maxRes[selectedTicketTemplate].h || imageData.image.width > maxRes[selectedTicketTemplate].w) {
+      imageData.image.height = maxRes[selectedTicketTemplate].h;
+      imageData.image.width = maxRes[selectedTicketTemplate].w;
+    }
+  }
+  return `https://static.wixstatic.com/media/${imageData.image.id}/v1/fill/w_${imageData.image.width},h_${imageData.image.height},al_c,q_90,usm_0.66_1.00_0.01,enc_auto/${imageData.image.id}`;
+}
 
 export function getLayoutSettings(settings) {
   const layoutSettings = {};
@@ -29,9 +45,9 @@ export function getLayoutStyles(layoutSettings) {
 
   const backgroundStyle = layoutSettings.backgrounds.documentColor.image.id
     ? {
-        backgroundSize: "cover",
-        backgroundImage: `url('${layoutSettings.backgrounds.documentColor.image.url}')`,
-      }
+      backgroundSize: "cover",
+      backgroundImage: `url('${layoutSettings.backgrounds.documentColor.image.url}')`,
+    }
     : undefined;
   const labelStyle = {
     fontFamily: `"${labelFontFamily}", ${fontFamilyList}`,

@@ -1,3 +1,12 @@
+export const maxRes = {
+    classic: { w: 1160, h: 640 },
+    sleek: { w: 1160, h: 672 },
+    professional: { w: 1186, h: 597 },
+    chic: { w: 448, h: 674 },
+    bold: { w: 1270, h: 635 },
+    playful: { w: 1150, h: 640 }
+}
+
 export const eventData = {
   "eventTitle": "Pertamina",
   "ticketNumber": "000-0000-00001",

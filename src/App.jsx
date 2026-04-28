@@ -14,7 +14,6 @@ function App() {
   useEffect(() => {
     const handleMessage = (e) => {
       if (e.data.source === "ticket-editor-page") {
-        console.log(e.data)
         setSettings(e.data.settings);
         setEventData(e.data.eventData);
         setTicketType(e.data.type);

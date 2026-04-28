@@ -1,5 +1,5 @@
 import { Label } from "./constant";
-import { getLayoutSettings, getLayoutStyles } from "./utils";
+import { getEventImageUrl, getLayoutSettings, getLayoutStyles } from "./utils";
 
 export default function Bold(props) {
   const { settings, eventData } = props;
@@ -204,7 +204,7 @@ export default function Bold(props) {
               }}
             >
               <img
-                src={layoutSettings.images.bottom_image.image.url}
+                src={getEventImageUrl(layoutSettings.images.bottom_image, "bold")}
                 alt="ticket_image"
                 style={{
                   objectFit:

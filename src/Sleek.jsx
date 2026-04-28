@@ -1,5 +1,5 @@
 import { Label } from "./constant";
-import { getLayoutSettings, getLayoutStyles } from "./utils";
+import { getEventImageUrl, getLayoutSettings, getLayoutStyles } from "./utils";
 
 export default function Sleek(props) {
   const { settings, eventData } = props;
@@ -226,7 +226,7 @@ export default function Sleek(props) {
               }}
             >
               <img
-                src={layoutSettings.images.bottom_image.image.url}
+                src={getEventImageUrl(layoutSettings.images.bottom_image, "sleek")}
                 alt="ticket_image"
                 style={{
                   objectFit:

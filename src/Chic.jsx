@@ -1,5 +1,5 @@
 import { Label } from "./constant";
-import { getLayoutSettings, getLayoutStyles } from "./utils";
+import { getEventImageUrl, getLayoutSettings, getLayoutStyles } from "./utils";
 
 export default function Chic(props) {
   const { settings, eventData } = props;
@@ -24,7 +24,7 @@ export default function Chic(props) {
             {layoutSettings.images.top_image.image.id && (
               <div className="R1noC_">
                 <img
-                  src={layoutSettings.images.top_image.image.url}
+                  src={getEventImageUrl(layoutSettings.images.top_image, "chic")}
                   alt="ticket_image"
                   style={{
                     objectFit:
