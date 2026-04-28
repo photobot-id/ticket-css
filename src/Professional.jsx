@@ -1,10 +1,10 @@
 import { Label } from "./constant";
-import { getEventImageUrl, getLayoutSettings, getLayoutStyles } from "./utils";
+import { getEventImageUrl, getLayoutSettings, getLayoutStyles, getLogoUrl } from "./utils";
 
 export default function Professional(props) {
   const { settings, eventData } = props;
   const layoutSettings = getLayoutSettings(settings);
-  const layoutStyles = getLayoutStyles(layoutSettings);
+  const layoutStyles = getLayoutStyles(layoutSettings, "professional");
   return (
     <div
       className="Zi4NQd"
@@ -28,7 +28,7 @@ export default function Professional(props) {
               {layoutSettings.logos.site_logo_image.image.id && (
                 <div className="c1FQRU">
                   <img
-                    src={layoutSettings.logos.site_logo_image.image.url}
+                    src={getLogoUrl(layoutSettings.logos.site_logo_image.image, "professional")}
                     alt="site_logo_image"
                     style={{
                       objectFit: "contain",

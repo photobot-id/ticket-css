@@ -1,10 +1,10 @@
 import { Label } from "./constant";
-import { getLayoutSettings, getLayoutStyles, getEventImageUrl } from "./utils";
+import { getLayoutSettings, getLayoutStyles, getEventImageUrl, getLogoUrl } from "./utils";
 
 export default function Classic(props) {
   const { settings, eventData } = props;
   const layoutSettings = getLayoutSettings(settings);
-  const layoutStyles = getLayoutStyles(layoutSettings);
+  const layoutStyles = getLayoutStyles(layoutSettings, "classic");
 
   return (
     <div className="upSYYl" style={layoutStyles.backgroundStyle}>
@@ -208,7 +208,7 @@ export default function Classic(props) {
                 {layoutSettings.logos.site_logo_image.image.id && (
                   <div className="biW1Xj">
                     <img
-                      src={layoutSettings.logos.site_logo_image.image.url}
+                      src={getLogoUrl(layoutSettings.logos.site_logo_image.image, "classic")}
                       alt="ticket_logo_image"
                       style={{
                         objectFit: "contain",

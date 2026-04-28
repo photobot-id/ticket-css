@@ -1,10 +1,10 @@
 import { Label } from "./constant";
-import { getEventImageUrl, getLayoutSettings, getLayoutStyles } from "./utils";
+import { getEventImageUrl, getLayoutSettings, getLayoutStyles, getLogoUrl } from "./utils";
 
 export default function Playful(props) {
   const { settings, eventData } = props;
   const layoutSettings = getLayoutSettings(settings);
-  const layoutStyles = getLayoutStyles(layoutSettings);
+  const layoutStyles = getLayoutStyles(layoutSettings, "playful");
   return (
     <div className="upSYYl">
       <div
@@ -25,7 +25,7 @@ export default function Playful(props) {
               {layoutSettings.logos.site_logo_image.image.id && (
                 <div>
                   <img
-                    src={layoutSettings.logos.site_logo_image.image.url}
+                    src={getLogoUrl(layoutSettings.logos.site_logo_image.image, "playful")}
                     alt="site_logo_image"
                     style={{
                       objectFit: "contain",

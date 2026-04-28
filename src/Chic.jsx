@@ -1,10 +1,10 @@
 import { Label } from "./constant";
-import { getEventImageUrl, getLayoutSettings, getLayoutStyles } from "./utils";
+import { getEventImageUrl, getLayoutSettings, getLayoutStyles, getLogoUrl } from "./utils";
 
 export default function Chic(props) {
   const { settings, eventData } = props;
   const layoutSettings = getLayoutSettings(settings);
-  const layoutStyles = getLayoutStyles(layoutSettings);
+  const layoutStyles = getLayoutStyles(layoutSettings, "chic");
   return (
     <div className="upSYYl" style={layoutStyles.backgroundStyle}>
       <div
@@ -43,7 +43,7 @@ export default function Chic(props) {
                 {layoutSettings.logos.site_logo_image.image.id && (
                   <div className="wZr1LF">
                     <img
-                      src={layoutSettings.logos.site_logo_image.image.url}
+                      src={getLogoUrl(layoutSettings.logos.site_logo_image.image, "chic")}
                       alt="site_logo_image"
                       style={{
                         objectFit: "contain",

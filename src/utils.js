@@ -1,4 +1,4 @@
-import { fontFamilyList, maxRes } from "./constant";
+import { fontFamilyList, maxRes, maxResLogo } from "./constant";
 
 export function getEventImageUrl(imageData, selectedTicketTemplate) {
   if (imageData.resize === "FIT") {
@@ -16,6 +16,39 @@ export function getEventImageUrl(imageData, selectedTicketTemplate) {
   return `https://static.wixstatic.com/media/${imageData.image.id}/v1/fill/w_${imageData.image.width},h_${imageData.image.height},al_c,q_90,usm_0.66_1.00_0.01,enc_auto/${imageData.image.id}`;
 }
 
+export function getLogoUrl(imageData, selectedTicketTemplate) {
+  if (imageData.image.height > maxResLogo[selectedTicketTemplate].h || imageData.image.width > maxResLogo[selectedTicketTemplate].w) {
+    const ratio = Math.min(maxResLogo[selectedTicketTemplate].w / imageData.image.width, maxResLogo[selectedTicketTemplate].h / imageData.image.height);
+    imageData.image.height = Math.round(imageData.image.height * ratio);
+    imageData.image.width = Math.round(imageData.image.width * ratio);
+  }
+  return `https://static.wixstatic.com/media/${imageData.image.id}/v1/fill/w_${imageData.image.width},h_${imageData.image.height},al_c,q_90,usm_0.66_1.00_0.01,enc_auto/${imageData.image.id}`;
+}
+
+export function getBackroundUrl(imageData, selectedTicketTemplate) {
+  let maxResBG = {
+    w: 743,
+    h: 1051
+  }
+
+  if (selectedTicketTemplate === "professional") {
+    maxResBG = {
+      w: 1469,
+      h: 678
+    }
+  }
+  if (imageData.height < maxResBG.h || imageData.width < maxResBG.w) {
+    const ratio = Math.min(maxResBG.w / imageData.width, maxResBG.h / imageData.height);
+    imageData.height = Math.round(imageData.height * ratio);
+    imageData.width = Math.round(imageData.width * ratio);
+  } else {
+    imageData.height = maxResBG.h;
+    imageData.width = maxResBG.w;
+  }
+  
+  return `https://static.wixstatic.com/media/${imageData.id}/v1/fill/w_${imageData.width},h_${imageData.height},al_c,q_90,usm_0.66_1.00_0.01,enc_auto/${imageData.id}`;
+}
+
 export function getLayoutSettings(settings) {
   const layoutSettings = {};
   settings.map((item) => {
@@ -30,7 +63,7 @@ export function getLayoutSettings(settings) {
   return layoutSettings;
 }
 
-export function getLayoutStyles(layoutSettings) {
+export function getLayoutStyles(layoutSettings, selectedTicketTemplate) {
   const lFontFamily = layoutSettings.texts.TicketDetailsTitles.fontFamily;
   const labelFontFamily =
     lFontFamily.split(" ").length > 1 ? `"${lFontFamily}"` : lFontFamily;
@@ -46,7 +79,7 @@ export function getLayoutStyles(layoutSettings) {
   const backgroundStyle = layoutSettings.backgrounds.documentColor.image.id
     ? {
       backgroundSize: "cover",
-      backgroundImage: `url('${layoutSettings.backgrounds.documentColor.image.url}')`,
+      backgroundImage: `url('${getBackroundUrl(layoutSettings.backgrounds.documentColor.image, selectedTicketTemplate)}')`,
     }
     : undefined;
   const labelStyle = {

@@ -1,10 +1,10 @@
 import { Label } from "./constant";
-import { getEventImageUrl, getLayoutSettings, getLayoutStyles } from "./utils";
+import { getEventImageUrl, getLayoutSettings, getLayoutStyles, getLogoUrl } from "./utils";
 
 export default function Sleek(props) {
   const { settings, eventData } = props;
   const layoutSettings = getLayoutSettings(settings);
-  const layoutStyles = getLayoutStyles(layoutSettings);
+  const layoutStyles = getLayoutStyles(layoutSettings, "sleek");
 
   return (
     <div className="upSYYl" style={layoutStyles.backgroundStyle}>
@@ -25,7 +25,7 @@ export default function Sleek(props) {
               {layoutSettings.logos.site_logo_image.image.id && (
                 <div className="DRjfeI">
                   <img
-                    src={layoutSettings.logos.site_logo_image.image.url}
+                    src={getLogoUrl(layoutSettings.logos.site_logo_image.image, "sleek")}
                     alt="ticket_logo_image"
                     style={{
                       objectFit: "contain",

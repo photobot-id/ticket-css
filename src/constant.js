@@ -7,6 +7,15 @@ export const maxRes = {
     playful: { w: 1150, h: 640 }
 }
 
+export const maxResLogo = {
+  classic: {w: 213, h: 213},
+  sleek: {w: 80, h: 80},
+  professional: {w: 64, h: 64},
+  chic: {w: 104, h: 104},
+  bold: {w: 96, h: 96},
+  playful: {w: 96, h: 96}
+}
+
 export const eventData = {
   "eventTitle": "Pertamina",
   "ticketNumber": "000-0000-00001",
