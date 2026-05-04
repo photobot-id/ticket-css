@@ -143,7 +143,7 @@ export function getLayoutStyles(layoutSettings, selectedTicketTemplate) {
   const titleStyle = {
     fontFamily: `${titleFontFamily}, ${fontFamilyList}`,
     fontSize: `${layoutSettings.texts.EventTitle.fontSize}px`,
-    textAlign: layoutSettings.texts.EventTitle.textAlignment,
+    textAlign: textAlign,
     color: layoutSettings.texts.EventTitle.textColor,
     width: "100%",
     display: "block",
