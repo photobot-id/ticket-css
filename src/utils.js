@@ -91,7 +91,7 @@ export function getLayoutStyles(layoutSettings, selectedTicketTemplate) {
     }
     : undefined;
   const labelStyle = {
-    fontFamily: `"${labelFontFamily}", ${fontFamilyList}`,
+    fontFamily: `${labelFontFamily}, ${fontFamilyList}`,
     fontSize: `${layoutSettings.texts.TicketDetailsTitles.fontSize}px`,
     textAlign: textAlign,
     color: layoutSettings.texts.TicketDetailsTitles.textColor,
