@@ -1,0 +1,167 @@
+@font-face {
+  font-family: "Syncopate";
+  src: url("https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/syncopate/v24/pe0sMIuPIYBCpEV5eFdCBfe_Kdxicw.woff2") format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("https://static.parastorage.com/fonts/v2/66ed32a6-d63b-4f2e-9895-91f58fc7bde6/v1/open%20sans.woff2") format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Heebo";
+  src: url("https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/heebo/v26/NGS6v5_NC0k9P9H2TbFhsqMA.woff2") format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/raleway/v26/1Ptug8zYS_SKggPNyC0IT4ttDfA.woff2") format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Domine";
+  src: url("https://fonts.gstatic.com/s/domine/v25/L0x8DFMnlVwD4h3hu_qnZypEiw.woff2") format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/montserrat/v14/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2") format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  src: url("https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/spacegrotesk/v6/V8mDoQDjQSkFtoMM3T6r8E7mPbF4C_k3HqU.woff2") format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url("https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/barlow/v12/7cHpv4kjgoGqM7E_DMs5ynghnQ.woff2") format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Archivo";
+  src: url("https://fonts.gstatic.com/s/archivo/v25/k3kPo8UDI-1M0wlSV9XAw6lQkqWY8Q82sLydOxKsv4Rn.woff2") format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/manrope/v19/xn7gYHE41ni1AdIRggexSvfedN4.woff2") format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suez One";
+  src: url("https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/suezone/v4/taiJGmd_EZ6rqscQgOFOmouC-50x.woff2") format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Arimo";
+  src: url("https://fonts.gstatic.com/s/arimo/v35/P5sMzZCDf9_T_10ZxCFuj5-v.woff2") format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fahkwang";
+  src: url("https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/fahkwang/v16/Noax6Uj3zpmBOgbNpOqIuLx7PiZ5.woff2") format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "WindSong";
+  src: url("https://fonts.gstatic.com/s/windsong/v13/KR1WBsyu-P-GFEW57o9-F9CYvSH2.woff2") format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Comforter";
+  src: url("https://fonts.gstatic.com/s/comforter/v9/H4clBXOCl8nQnlaql3Qq75u9qKS-aw.woff2") format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  src: url("https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/worksans/v19/QGYsz_wNahGAdqQ43Rh_fKDptfpA4Q.woff2") format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Serif Display";
+  src: url("https://fonts.gstatic.com/s/dmserifdisplay/v17/-nFnOHM81r4j6k0gjAW3mujVU2B2G_Bx0vrx52g.woff2") format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto Mono";
+  src: url("https://fonts.gstatic.com/s/robotomono/v31/L0x5DF4xlVMF-BfR8bXMIjhLq3-cXbKD.woff2") format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Rozha One";
+  src: url("https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/rozhaone/v7/AlZy_zVFtYP12Zncg2kRcn35fh4Dog.woff2") format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bona Nova";
+  src: url("https://fonts.gstatic.com/s/bonanova/v12/B50NF7ZCpX7fcHfvIUB5jKJrPqySLQ.woff2") format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/poppins/v21/pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2") format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Forum";
+  src: url("https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/forum/v10/6aey4Ky-Vb8Ew8IROpI43XnS.woff2") format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/oswald/v29/TK3iWkUHHAIjg752GT8Gl-1PKw.woff2") format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Kaushan Script";
+  src: url("https://fonts.gstatic.com/s/kaushanscript/v19/vm8vdRfvXFLG3OLnsO15WYS5DG74wNJVMJ8b.woff2") format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url("https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/playfairdisplay/v18/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ.woff2") format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lobster";
+  src: url("https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/lobster/v22/neILzCirqoswsqX9zoKmM4MwWJU.woff2") format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Syne";
+  src: url("https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/syne/v22/8vIH7w4qzmVxm2BL9G78HEY.woff2") format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/roboto/v32/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2") format('woff2');
+  font-display: swap;
+}
