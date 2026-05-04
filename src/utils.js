@@ -76,7 +76,7 @@ export function getLayoutStyles(layoutSettings, selectedTicketTemplate) {
   const titleFontFamily =
     tFontFamily.split(" ").length > 1 ? `"${tFontFamily}"` : tFontFamily;
 
-  let textAlign = layoutSettings.texts.TicketDetailsTitles.textAlign;
+  let textAlign = layoutSettings.texts.TicketDetailsTitles.textAlignment;
   if (textAlign === "left") {
     textAlign = "start";
   }
@@ -143,7 +143,7 @@ export function getLayoutStyles(layoutSettings, selectedTicketTemplate) {
   const titleStyle = {
     fontFamily: `${titleFontFamily}, ${fontFamilyList}`,
     fontSize: `${layoutSettings.texts.EventTitle.fontSize}px`,
-    textAlign: textAlign,
+    textAlign: layoutSettings.texts.EventTitle.textAlignment,
     color: layoutSettings.texts.EventTitle.textColor,
     width: "100%",
     display: "block",
