@@ -181,7 +181,7 @@ export default function Classic(props) {
                       <div
                         className="niimv4"
                         style={{
-                          justifyContent: "start",
+                          justifyContent: layoutStyles.textAlign,
                         }}
                       >
                         <img

@@ -62,7 +62,7 @@ export default function Playful(props) {
                 </div>
                 {(layoutSettings.display.show_ticket_price ||
                   layoutSettings.display.show_payment_status) && (
-                  <div className="qMFmhU" style={{ justifyContent: "start" }}>
+                  <div className="qMFmhU" style={{ justifyContent: layoutStyles.textAlign }}>
                     {layoutSettings.display.show_ticket_price && (
                       <div className="IYXGYD">
                         <span className="gG_HWJ">

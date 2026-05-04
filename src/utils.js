@@ -76,6 +76,14 @@ export function getLayoutStyles(layoutSettings, selectedTicketTemplate) {
   const titleFontFamily =
     tFontFamily.split(" ").length > 1 ? `"${tFontFamily}"` : tFontFamily;
 
+  let textAlign = layoutSettings.texts.TicketDetailsTitles.textAlign;
+  if (textAlign === "left") {
+    textAlign = "start";
+  }
+  if (textAlign === "right") {
+    textAlign = "end";
+  }
+
   const backgroundStyle = layoutSettings.backgrounds.documentColor.image.id
     ? {
       backgroundSize: "cover",
@@ -85,7 +93,7 @@ export function getLayoutStyles(layoutSettings, selectedTicketTemplate) {
   const labelStyle = {
     fontFamily: `"${labelFontFamily}", ${fontFamilyList}`,
     fontSize: `${layoutSettings.texts.TicketDetailsTitles.fontSize}px`,
-    textAlign: layoutSettings.texts.TicketDetailsTitles.textAlign,
+    textAlign: textAlign,
     color: layoutSettings.texts.TicketDetailsTitles.textColor,
     width: "100%",
     display: "block",
@@ -110,7 +118,7 @@ export function getLayoutStyles(layoutSettings, selectedTicketTemplate) {
   const detailsStyle = {
     fontFamily: `${detailsFontFamily}, ${fontFamilyList}`,
     fontSize: `${layoutSettings.texts.TicketDetails.fontSize}px`,
-    textAlign: "start",
+    textAlign: textAlign,
     color: layoutSettings.texts.TicketDetails.textColor,
     width: "100%",
     display: "block",
@@ -200,5 +208,6 @@ export function getLayoutStyles(layoutSettings, selectedTicketTemplate) {
     titleStyle,
     dividerStyle,
     policyStyle,
+    textAlign
   };
 }

@@ -58,7 +58,7 @@ export default function Bold(props) {
                     </span>
                   </div>
                 )}
-                <div className="s_bByr" style={{ justifyContent: "start" }}>
+                <div className="s_bByr" style={{ justifyContent: layoutStyles.textAlign }}>
                   <div className="IYXGYD">
                     <span className="gG_HWJ">
                       <span style={layoutStyles.labelStyle}>
@@ -100,7 +100,7 @@ export default function Bold(props) {
                 </div>
               )}
             </div>
-            <div className="jUEhVb" style={{ justifyContent: "start" }}>
+            <div className="jUEhVb" style={{ justifyContent: layoutStyles.textAlign }}>
               {layoutSettings.display.show_order_number && (
                 <div className="degm58">
                   <span

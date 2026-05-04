@@ -42,7 +42,7 @@ export default function Sleek(props) {
                 className="Gg7kDh pwOGjD RjeHZ5 rS3D7n"
                 style={layoutStyles.dividerStyle}
               ></div>
-              <div className="Uucjac" style={{ justifyContent: "start" }}>
+              <div className="Uucjac" style={{ justifyContent: layoutStyles.textAlign }}>
                 <div
                   className="QqLe7o Gg7kDh pwOGjD ryhobB rS3D7n"
                   style={layoutStyles.dividerStyle}
@@ -124,7 +124,7 @@ export default function Sleek(props) {
                       >
                         <div
                           className="o0PQRT"
-                          style={{ justifyContent: "start" }}
+                          style={{ justifyContent: layoutStyles.textAlign }}
                         >
                           {layoutSettings.display.show_payment_status && (
                             <div className="IYXGYD">
@@ -194,7 +194,7 @@ export default function Sleek(props) {
                       {layoutSettings.display.show_qr_code && (
                         <div
                           className="xyvJkj"
-                          style={{ justifyContent: "start" }}
+                          style={{ justifyContent: layoutStyles.textAlign }}
                         >
                           <img
                             className="rUEhIv"

@@ -51,7 +51,7 @@ export default function Professional(props) {
               }}
             >
               {layoutSettings.display.show_qr_code && (
-                <div className="DZbAKT" style={{ justifyContent: "start" }}>
+                <div className="DZbAKT" style={{ justifyContent: layoutStyles.textAlign }}>
                   <img
                     className="ezZjL1"
                     alt="Ticket QR code"
