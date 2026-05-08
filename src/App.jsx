@@ -37,7 +37,7 @@ function App() {
         return <Chic eventData={eventData} settings={settings}/>;
       case "bold":
         return <Bold eventData={eventData} settings={settings}/>;
-      case "playful":
+      case "playfull":
         return <Playful eventData={eventData} settings={settings}/>;
       default:
         return <Classic eventData={eventData} settings={settings}/> ;
